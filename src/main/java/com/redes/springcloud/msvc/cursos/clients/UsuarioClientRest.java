@@ -9,12 +9,12 @@ import java.util.List;
 @FeignClient(name = "msvc-usuarios",url = "localhost:8001")
 public interface UsuarioClientRest {
 
-    @GetMapping("/{id}")
+    @GetMapping("/usuarios/{id}")
     Usuario detalle(@PathVariable Long id);
 
-    @PostMapping("/")
+    @PostMapping("/usuarios/")
     Usuario crear(@RequestBody Usuario usuario);
 
-    @GetMapping("/usuarios-por-curso")
+    @GetMapping("/usuarios/usuarios-por-curso")
     List<Usuario> obtenerAlumnosPorCurso(@RequestParam Iterable<Long> ids);
 }

@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import java.util.*;
 
 @RestController
+@RequestMapping("/cursos")
 public class CursoController {
 
     @Autowired
