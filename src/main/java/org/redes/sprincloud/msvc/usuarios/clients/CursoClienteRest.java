@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "msvc-cursos",url = "localhost:8002")
 public interface CursoClienteRest {
 
-    @DeleteMapping("/eliminar-curso-usuario/{id}")
+    @DeleteMapping("/cursos/eliminar-curso-usuario/{id}")
     void eliminarCursoUsuarioPorId(@PathVariable Long id);
 }
